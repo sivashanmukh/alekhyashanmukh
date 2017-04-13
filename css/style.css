@@ -1895,3 +1895,19 @@ form label {
    }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+@media (max-width: 414px) {
+  .simply-countdown > .simply-section {
+    width: 62px;
+    height: 62px;
+  }
+  .simply-countdown > .simply-section .simply-amount {
+    line-height: 1;
+  }
+  .simply-countdown > .simply-section > div {
+    width: 62px;
+    height: 62px;
+  }
+}
