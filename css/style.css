@@ -1894,9 +1894,6 @@ form label {
    color: #fff;
    }
 
-/*# sourceMappingURL=style.css.map */
-
-
 
 @media (max-width: 414px) {
   .simply-countdown > .simply-section {
@@ -1910,4 +1907,10 @@ form label {
     width: 62px;
     height: 62px;
   }
+  .fh5co-cover {
+    background-position: center center !important;
+  }
 }
+
+
+/*# sourceMappingURL=style.css.map */
