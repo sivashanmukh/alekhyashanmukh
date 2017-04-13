@@ -1909,6 +1909,7 @@ form label {
   }
   .fh5co-cover {
     background-position: center center !important;
+    min-height: 100vh;
   }
 }
 
