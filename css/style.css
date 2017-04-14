@@ -1066,14 +1066,17 @@ form label {
 }
 .couple-half h3 {
   font-family: "Sacramento", Arial, serif;
- 
+  margin-top: 20px;
   color: #F14E95;
   font-size: 60px;
+  text-shadow: 0 0 5px #000;
 }
 .couple-half h2 {
   font-family: "Sacramento", Arial, serif;
   color: #fff;
   font-size: 32px;
+  line-height: 1.5em;
+  text-shadow: 0 0 5px #000;
 }
 .couple-half .groom, .couple-half .bride {
   float: left;
@@ -1113,7 +1116,7 @@ form label {
 }
 .couple-half .desc-groom {
   padding-right: 0px;
-  text-align: right;
+  text-align: center;
 }
 .couple-half .desc-bride {
   padding-left: 0px;
@@ -1895,6 +1898,11 @@ form label {
    }
 
 
+.about_b {
+  background: #193421;
+  color: #fff;
+}
+
 @media (max-width: 414px) {
   .simply-countdown > .simply-section {
     width: 62px;
@@ -1910,6 +1918,12 @@ form label {
   .fh5co-cover {
     background-position: center center !important;
     min-height: 100vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .couple-half h3 {
+    margin-top: 100px;
   }
 }
 
