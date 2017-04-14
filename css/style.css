@@ -1021,7 +1021,7 @@ form label {
 }
 
 .couple-wrap {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -1068,12 +1068,12 @@ form label {
   font-family: "Sacramento", Arial, serif;
  
   color: #F14E95;
-  font-size: 35px;
+  font-size: 60px;
 }
 .couple-half h2 {
-  font-family: Arial, serif;
+  font-family: "Sacramento", Arial, serif;
   color: #fff;
-  font-size: 18px;
+  font-size: 32px;
 }
 .couple-half .groom, .couple-half .bride {
   float: left;
@@ -1112,11 +1112,11 @@ form label {
   margin-left: 5px;
 }
 .couple-half .desc-groom {
-  padding-right: 180px;
+  padding-right: 0px;
   text-align: right;
 }
 .couple-half .desc-bride {
-  padding-left: 180px;
+  padding-left: 0px;
   text-align: left;
 }
 @media screen and (max-width: 480px) {
