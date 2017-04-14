@@ -1066,7 +1066,7 @@ form label {
 }
 .couple-half h3 {
   font-family: "Sacramento", Arial, serif;
-  margin-top: 20px;
+  margin-top: 100px;
   color: #F14E95;
   font-size: 60px;
   text-shadow: 0 0 5px #000;
@@ -1898,8 +1898,12 @@ form label {
    }
 
 
-.about_b {
+body.about_b {
   background: #193421;
+  color: #fff;
+}
+body.about_g {
+  background: #758671;
   color: #fff;
 }
 
@@ -1923,7 +1927,7 @@ form label {
 
 @media (min-width: 1200px) {
   .couple-half h3 {
-    margin-top: 100px;
+    margin-top: 150px;
   }
 }
 
