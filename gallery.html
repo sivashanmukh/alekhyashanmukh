@@ -129,6 +129,9 @@
 							</div>
 						</a>
 					</li>
+					<li>
+						<a href="https://www.youtube.com/watch?v=OZQLWHFePe8" class="mfp-iframe">Open video (gallery #2). Class mfp-iframe forces "iframe" content type on this item.</a>
+					</li>
 					
 					</ul>		
 				</div>
@@ -678,6 +681,18 @@
         month: d.getMonth() + 1,
         day: d.getDate(),
         enableUtc: false
+    });
+
+    // Gallery init
+    jQuery(function() {
+			$('#fh5co-gallery-list').magnificPopup({
+			  delegate: 'a', // child items selector, by clicking on it popup will open
+			  type: 'image',
+			  gallery:{
+			    enabled:true
+			  }
+			  // other options
+			});
     });
 </script>
 
