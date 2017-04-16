@@ -63,24 +63,48 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<style>
+.heart1 {
+	font-size: 14px !important;
+	color: #fff;
+	animation: beat .74s infinite alternate;
+	transform-origin: center;
+	display:block !important;
+	text-shadow:0 0 20px #000
+}
 
+.heart2 {
+	font-size: 15px !important;
+	color: #fff;
+	animation: beat .74s infinite alternate;
+	transform-origin: center;
+	display:block !important;
+	text-shadow:0 0 20px #000
+	transition-delay: .74s;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.07); }
+}
+</style>
 	</head>
 	<body>
 		
-<div class="fh5co-loader"></div>
+	<div class="fh5co-loader"></div>
 	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
 			<div class="row">
-								
-				
 				<div class="col-xs-10 text-right menu-1">
+					
 					<ul>
-						<li class="active"><a href="./">Home</a></li>
+						<li class="active"><a href="./index.html">Home</a></li>
 						<li><a href="./about_b.html">Our Story</a></li>
-						<li><a href="./sbook.html">Scrapbook</a></li>
 						<li><a href="./events.html">Events</a></li>
+						<li><a href="./vinvite.html">Video Invitiation</a></li>
+						<li><a href="./sbook.html">Scrapbook</a></li>
 						<li><a href="./gallery.html">Gallery</a></li>
 						<li><a href="./contact.html">Contact</a></li>
 						<li><a href="./copyrights.html">Copyrights</a></li>
@@ -91,45 +115,36 @@
 			
 		</div>
 	</nav>
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.1">
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-						</br>
-						</br>
-							<h1>Alekhya</h1>
+							<!--<h1>Alekhya</h1>
 							<h1>&amp;</h1>
-							<h1>Shanmukh</h1>
-							<!--
-							<h2>We graciously invite you to our Wedding Event. Save the dates MAY 6th-7th, 2017 </h2>
+							<h1>Shanmukh</h1>-->
+							<br/>
+							<br/>
+							<div style="color:#fff;font-size:20px;text-shadow: 0 0 10px;">Cool! Let me know one more 😬</div>
+							<br/>
+							<p><a href="./bride_rel.html" class="btn btn-default btn-sm heart1">Relatives</a></p>
+							<p><a href="./bride_ff.html" class="btn btn-default btn-sm heart2">Friends</a></p>
+							<h2>Save the dates MAY 6th-7th, 2017</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							-->
-							<h2>Cool! Let me know one more 😬</h2>
-							<p><a href="./bride_rel.html" class="btn btn-default btn-sm">Relatives</a></p>
-							<p><a href="./bride_ff.html" class="btn btn-default btn-sm">Friends</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
-<!--
+
+	
 	<div id="fh5co-couple">
 		<div class="container">
-			<div class="row">
-			<!--
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Welcome!</h2>
-					<h3>May 5th-7th, 2017 - Vizag</h3>
-					<p>We invite you to celebrate our Wedding Event</p>
-				</div>
-				-->
-<!--				
-			</div>
-		
+					
 			<div class="couple-wrap animate-box">
 				<div class="couple-half">
 					<div class="groom">
@@ -137,7 +152,14 @@
 					</div>
 					<div class="desc-groom">
 						<h3>Alekhya Meher</h3>
-						<p>Pending Info</p>
+						<p style="font-family:Sacramento,arial,serif;text-shadow:0 0 10px;font-size:20px;">Brought up by the winds of seashore, <br/>
+Brave n crazy she is outdoor. <br/>
+<br/>
+Firebrand for few, <br/>
+While a pot of honey for few. <br/>
+<br/>
+Amazing Friend and a favourite festival for many, <br/>
+A beautiful princess from the city of destiny.</p>
 					</div>
 				</div>
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -147,53 +169,21 @@
 					</div>
 					<div class="desc-bride">
 						<h3>Siva Shanmukh Vetcha</h3>
-						<p>Pending Info</p>
+						<p style="font-family:Sacramento,arial,serif;text-shadow:0 0 10px;font-size:21px;">To his friends he's a cuber, a coding genius!<br>
+He laughs at adversity, saying "Why so serious?"<br>
+<br>
+His college life was stormy, no silent breeze!<br>
+Yet nothing ever managed to bring him to his knees!<br>
+<br>
+But suddenly, into his life a damsel whirls!<br>
+And floored is the dashing Prince from the City of Pearls!</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Sangeeth</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="display-t">
-					<div class="display-tc-center">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Sangeeth</h3>
-									<div class="event-col">
-										<i class="icon-clock"></i>
-										<span>6:00 PM</span>
-								
-									</div>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>Friday 5</span>
-										<span>May, 2017</span>
-									</div>
-									<p>Fun with Music and Steps to make moments that cherish forever</p>
-									<p>Venue: At our Sweet Home, Rama Talkies, Vizag</p>
-								</div>
-								
-							</div>
-							
-							
-							
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
+	
 	
 	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
 		<div class="overlay"></div>
@@ -246,147 +236,355 @@
 		</div>
 	</div>
 	
-
-	<div id="fh5co-couple-story">
+	
+	<div id="fh5co-testimonial">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					
-					<h2>Our Story</h2>
-					<p>This is how god made us find each other</p>
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<span>Scrapbook</span>
+						<h2>Send your Wishes</h2>
+						<table style="margin:auto;">
+						<tbody>
+							<tr><td style="text-align:right;">Name:</td><td><input class="scrap-input" type="text" name="aname" style="border-style:none none dotted;"></td></tr>
+							<tr><td style="text-align:right;">Email:</td><td><input class="scrap-input" type="text" name="aemail" style="border-style:none none dotted;"></td></tr>
+							<tr><td style="text-align:right;vertical-align:top;">Wishes:</td><td><textarea id="awish" rows="4" style="border-style:none none dotted;"></textarea></td></tr>
+							<tr><td colspan="2"><input type="button">Submit</td></tr>
+						</tbody></table>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline animate-box">
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">The First Meet</h3>
-									<span class="date">December xx, 2016</span>
+				<!--
+				<div class="row">
+					<div class="col-md-12 animate-box">
+						<div class="wrap-testimony">
+							<div class="owl-carousel-fullwidth">
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="images/couple-1.jpg" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
+										</blockquote>
+									</div>
 								</div>
-								<div class="timeline-body">
-									<p>Infoxxxxxxxxxxxx</p>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="images/couple-2.jpg" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the coast of the Semantics, a large language ocean."</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="images/couple-3.jpg" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+										</blockquote>
+									</div>
 								</div>
 							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Engagement</h3>
-									<span class="date">December 28, 2015</span>
-								</div>
-								<div class="timeline-body">
-									<p>Infoxxxxxxxxxxx</p>
-								</div>
-							</div>
-						</li>
-						
-			    	</ul>
+						</div>
+					</div>
 				</div>
+				-->
 			</div>
 		</div>
 	</div>
+	
 
-<!--
-	<div id="fh5co-gallery" class="fh5co-section-gray">
+	
+
+
+		<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<span>Our Memories</span>
-					<h2>Wedding Gallery</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					<h2>Gallery</h2>
+					<p>Engagement</p>
 				</div>
 			</div>
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
-						
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0549.jpg); "> 
+						<a href="images/192A0549.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0719.jpg); "> 
+						<a href="images/192A0719.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0346.jpg); "> 
+						<a href="images/192A0346.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0483.jpg); "> 
+						<a href="images/192A0483.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0591.jpg); "> 
+						<a href="images/192A0591.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0521.jpg); "> 
+						<a href="images/192A0521.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0583.jpg); "> 
+						<a href="images/192A0583.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0717.jpg); "> 
+						<a href="images/192A0717.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_2909.jpg); "> 
+						<a href="images/IMG_2909.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_2910.jpg); "> 
+						<a href="images/IMG_2910.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_3.jpg); "> 
+						<a href="images/img_bg_3.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_4.jpg); "> 
+						<a href="images/img_bg_4.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0776.jpg); "> 
+						<a href="images/192A0776.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170227-WA0036.jpg); "> 
+						<a href="images/IMG-20170227-WA0036.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/groom.jpg); "> 
+						<a href="images/groom.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170205-WA0043.jpg); "> 
+						<a href="images/IMG-20170205-WA0043.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_g.jpg); "> 
+						<a href="images/img_bg_g.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170205-WA0044.jpg); "> 
+						<a href="images/IMG-20170205-WA0044.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170205-WA0013.jpg); "> 
+						<a href="images/IMG-20170205-WA0013.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_21.jpg); "> 
+						<a href="images/img_bg_21.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/bride.jpg); "> 
+						<a href="images/bride.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_0.jpg); "> 
+						<a href="images/img_bg_0.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bgb.jpg); "> 
+						<a href="images/img_bgb.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170310-WA0014.jpg); "> 
+						<a href="images/IMG-20170310-WA0014.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/couple-1.jpg); "> 
+						<a href="images/couple-1.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
 						<a href="images/gallery-1.jpg">
 							<div class="case-studies-summary">
-								<span>14 Photos</span>
-								<h2>Two Glas of Juice</h2>
+								<h2>The moment</h2>
 							</div>
 						</a>
 					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
-						<a href="#" class="color-2">
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_6_remove.jpg); "> 
+						<a href="images/img_bg_6_remove.jpg">
 							<div class="case-studies-summary">
-								<span>30 Photos</span>
-								<h2>Timer starts now!</h2>
+								<h2>The moment</h2>
 							</div>
 						</a>
 					</li>
-
-
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
-						<a href="#" class="color-3">
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_3_remove.jpg); "> 
+						<a href="images/img_bg_3_remove.jpg">
 							<div class="case-studies-summary">
-								<span>90 Photos</span>
-								<h2>Beautiful sunset</h2>
+								<h2>The moment</h2>
 							</div>
 						</a>
 					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-4.jpg); ">
-						<a href="#" class="color-4">
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); "> 
+						<a href="images/gallery-3.jpg">
 							<div class="case-studies-summary">
-								<span>12 Photos</span>
-								<h2>Company's Conference Room</h2>
+								<h2>The moment</h2>
 							</div>
 						</a>
 					</li>
-
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-5.jpg); ">
-							<a href="#" class="color-3">
-								<div class="case-studies-summary">
-									<span>50 Photos</span>
-									<h2>Useful baskets</h2>
-								</div>
-							</a>
-						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-6.jpg); ">
-							<a href="#" class="color-4">
-								<div class="case-studies-summary">
-									<span>45 Photos</span>
-									<h2>Skater man in the road</h2>
-								</div>
-							</a>
-						</li>
-
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-7.jpg); ">
-							<a href="#" class="color-4">
-								<div class="case-studies-summary">
-									<span>35 Photos</span>
-									<h2>Two Glas of Juice</h2>
-								</div>
-							</a>
-						</li>
-
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-8.jpg); "> 
-							<a href="#" class="color-5">
-								<div class="case-studies-summary">
-									<span>90 Photos</span>
-									<h2>Timer starts now!</h2>
-								</div>
-							</a>
-						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-9.jpg); ">
-							<a href="#" class="color-6">
-								<div class="case-studies-summary">
-									<span>56 Photos</span>
-									<h2>Beautiful sunset</h2>
-								</div>
-							</a>
-						</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); "> 
+						<a href="images/gallery-2.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_c1.jpg); "> 
+						<a href="images/img_bg_c1.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170131-WA0011.jpg); "> 
+						<a href="images/IMG-20170131-WA0011.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_2.jpg); "> 
+						<a href="images/img_bg_2.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0530.jpg); "> 
+						<a href="images/192A0530.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_4_remove.jpg); "> 
+						<a href="images/img_bg_4_remove.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0788.jpg); "> 
+						<a href="images/192A0788.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_6.jpg); "> 
+						<a href="images/img_bg_6.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/watch?v=OZQLWHFePe8" class="mfp-iframe" style="background-image: url(images/img_bg_2.jpg); background-size: cover; color: white;">Open video (gallery #2). Class mfp-iframe forces "iframe" content type on this item.</a>
+					</li>
+					
 					</ul>		
 				</div>
 			</div>
 		</div>
 	</div>
--->
+
 <!--
 	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
 		<div class="overlay"></div>
@@ -497,67 +695,51 @@
 	</div>
 -->
 <!--
-	<div id="fh5co-services" class="fh5co-section-gray">
+<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
-			
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Moments to Share</h2>
-					<p>Choose a below to get a sneak</p>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Our Memories</span>
+					<h2>Gallery</h2>
+					<p>Engagement</p>
 				</div>
 			</div>
-
-			<!--<div class="row">-->
-<!--			
-					<div class="col-md-6">
-					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-							<div class="feature-copy">
-							<a href="images/test.mp4" class="popup-vimeo"><h3 class="btn btn-default btn-sm">Bride - Alekhya's Relatives</h3></a>
-					</div>
-					</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-12">
+					<ul id="fh5co-gallery-list">
+						
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
+						<a href="images/gallery-1.jpg">
+							<div class="case-studies-summary">
+								<h2>Rings</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); "> 
+						<a href="images/gallery-2.jpg">
+							<div class="case-studies-summary">
+								<h2>The moment</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); "> 
+						<a href="images/gallery-3.jpg">
+							<div class="case-studies-summary">
+								<h2>Joy</h2>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/watch?v=OZQLWHFePe8" class="mfp-iframe">Open video (gallery #2). Class mfp-iframe forces "iframe" content type on this item.</a>
+					</li>
 					
-					<div class="col-md-6">
-					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-							<div class="feature-copy">
-							<a href="images/test.mp4" class="popup-vimeo"><h3 class="btn btn-default btn-sm">Groom - Shanmukh's Relatives</h3></a>
-					</div>
-					</div>
-					
-					<div class="col-md-6">
-					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-							<div class="feature-copy">
-							<a href="images/test.mp4" class="popup-vimeo"><h3 class="btn btn-default btn-sm">Bride - Alekhya's Friends</h3></a>
-					</div>
-					</div>
-					
-					<div class="col-md-6">
-					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-							<div class="feature-copy">
-							<a href="images/test.mp4" class="popup-vimeo"><h3 class="btn btn-default btn-sm">Groom - Shanmukh's Friends</h3></a>
-					</div>
-					</div>
-					
-
-					
-
-				<!--</div>-->
-				
-<!--
-				<div class="col-md-6 animate-box">
-					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
-					
-						<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a>
-						<div class="overlay"></div>
-					</div>
--->	
-<!--				
+					</ul>		
 				</div>
 			</div>
-
-			
 		</div>
 	</div>
-
+	
+-->
 
 	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_6.jpg);">
 		<div class="overlay"></div>
@@ -585,33 +767,41 @@
 							</div>
 						</div>
 					-->
-					<!--
 						<div class="col-md-4 col-sm-4">
 						<a class="btn btn-default btn-block" href="tel:+917799001080">Shanmukh: 779 900 1080</a>
 						<br>
-						<a class="btn btn-default btn-block" href="tel:+919940399990">Alekhya: 994 039 9990</a>
+						<a class="btn btn-default btn-block" href="tel:+919940399990">Alekhya: 949 342 5099</a>
 						</br>
 						</div>
+						
+						
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
--->
-<!--
+
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
-					<small class="block">&copy; 2017 AlekhyaShamukh.in - All Rights Reserved.</small> 
+					<p>
 					
-					</div>
+						<small class="block">&copy; 2017 AlekhyaShamukh.in - All Rights Reserved.</small> 
+					</p>
+				</div>
+				<div class="col-md-12 text-center">
+					<p>
+					
+						<small class="block">Save paper, save trees</small> 
+					</p>
+				</div>
 			</div>
 
 		</div>
 	</footer>
--->
+
 	</div>
 
 	<div class="gototop js-top">
@@ -659,6 +849,19 @@
         day: d.getDate(),
         enableUtc: false
     });
+
+    jQuery(function() {
+			$('#fh5co-gallery-list').magnificPopup({
+			  delegate: 'a', // child items selector, by clicking on it popup will open
+			  type: 'image',
+			  gallery:{
+			    enabled:true
+			  }
+			  // other options
+			});
+    });
+
+
 </script>
 
 	</body>
