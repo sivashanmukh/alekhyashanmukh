@@ -106,8 +106,8 @@
 							<div class="simply-countdown simply-countdown-one"></div>
 							-->
 							<h2>Well done! The last one 😉</h2>
-							<p><a href="https://www.youtube.com/embed/eK08nUbpItk" class="test-popup-link btn btn-default btn-sm">Family Friends</a></p>
-							<p><a href="https://www.youtube.com/embed/HXlYKR03r1o" class="test-popup-link btn btn-default btn-sm">Shanmukh's Friends</a></p>
+							<p><a href="https://www.youtube.com/embed/eK08nUbpItk" class="fh5co-gallery-list btn btn-default btn-sm">Family Friends</a></p>
+							<p><a href="https://www.youtube.com/embed/HXlYKR03r1o" class="btn btn-default btn-sm">Shanmukh's Friends</a></p>
 						</div>
 					</div>
 				</div>
@@ -657,6 +657,17 @@
         day: d.getDate(),
         enableUtc: false
     });
+
+    jQuery(function() {
+                        $('#fh5co-gallery-list').magnificPopup({
+                          delegate: 'a', // child items selector, by clicking on it popup will open
+                          type: 'image',
+                          gallery:{
+                            enabled:true
+                          }
+                          // other options
+                        });
+    });
 </script>
 <!--      	<script>
         	$('.test-popup-link').magnificPopup({
@@ -667,4 +678,3 @@
 -->
 	</body>
 </html>
-
