@@ -63,7 +63,31 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<style>
+.heart1 {
+	font-size: 14px !important;
+	color: #fff;
+	animation: beat .74s infinite alternate;
+	transform-origin: center;
+	display:block !important;
+	text-shadow:0 0 20px #000
+}
 
+.heart2 {
+	font-size: 15px !important;
+	color: #fff;
+	animation: beat .74s infinite alternate;
+	transform-origin: center;
+	display:block !important;
+	text-shadow:0 0 20px #000
+	transition-delay: .74s;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.07); }
+}
+</style>
 	</head>
 	<body>
 		
@@ -99,12 +123,15 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Alekhya</h1>
+							<!--<h1>Alekhya</h1>
 							<h1>&amp;</h1>
-							<h1>Shanmukh</h1>
-							<h2>Hello! Tap the one you know</h2>
-							<p><a href="./groom.html" class="btn btn-default btn-sm">Groom</a></p>
-							<p><a href="./bride.html" class="btn btn-default btn-sm">Bride</a></p>
+							<h1>Shanmukh</h1>-->
+							<br/>
+							<br/>
+							<div style="color:#fff;font-size:20px;text-shadow: 0 0 10px;">Hello! Tap the one you know</div>
+							<br/>
+							<p><a href="./groom.html" class="btn btn-default btn-sm heart1">Shanmukh</a></p>
+							<p><a href="./bride.html" class="btn btn-default btn-sm heart2">Alekhya</a></p>
 							<h2>Save the dates MAY 6th-7th, 2017</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 						</div>
@@ -125,7 +152,7 @@
 					</div>
 					<div class="desc-groom">
 						<h3>Alekhya Meher</h3>
-						<p>Brought up by the winds of seashore, <br/>
+						<p style="font-family:Sacramento,arial,serif;text-shadow:0 0 10px;font-size:20px;">Brought up by the winds of seashore, <br/>
 Brave n crazy she is outdoor. <br/>
 <br/>
 Firebrand for few, <br/>
@@ -142,7 +169,7 @@ A beautiful princess from the city of destiny.</p>
 					</div>
 					<div class="desc-bride">
 						<h3>Siva Shanmukh Vetcha</h3>
-						<p>To his friends he's a cuber, a coding genius!<br>
+						<p style="font-family:Sacramento,arial,serif;text-shadow:0 0 10px;font-size:21px;">To his friends he's a cuber, a coding genius!<br>
 He laughs at adversity, saying "Why so serious?"<br>
 <br>
 His college life was stormy, no silent breeze!<br>
@@ -199,7 +226,7 @@ And floored is the dashing Prince from the City of Pearls!</p>
 										<span>May, 2017</span>
 									</div>
 									<p>Sumuhurtham: 3:06 AM (Early Hours of Sunday) on 7th May 2017</p>
-									<p>Venue: The Seante, Hotel Dolphin, Visakhapatnam</p>
+									<p>Venue: The Senate, Hotel Dolphin, Visakhapatnam</p>
 								</div>
 							</div>
 						</div>
@@ -217,6 +244,13 @@ And floored is the dashing Prince from the City of Pearls!</p>
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<span>Scrapbook</span>
 						<h2>Send your Wishes</h2>
+						<table style="margin:auto;">
+						<tbody>
+							<tr><td style="text-align:right;">Name:</td><td><input class="scrap-input" type="text" name="aname" style="border-style:none none dotted;"></td></tr>
+							<tr><td style="text-align:right;">Email:</td><td><input class="scrap-input" type="text" name="aemail" style="border-style:none none dotted;"></td></tr>
+							<tr><td style="text-align:right;vertical-align:top;">Wishes:</td><td><textarea id="awish" rows="4" style="border-style:none none dotted;"></textarea></td></tr>
+							<tr><td colspan="2"><input type="button">Submit</td></tr>
+						</tbody></table>
 					</div>
 				</div>
 				<!--
@@ -304,6 +338,7 @@ And floored is the dashing Prince from the City of Pearls!</p>
 							</div>
 						</a>
 					</li>
+
 					<li>
 						<a href="https://www.youtube.com/watch?v=OZQLWHFePe8" class="mfp-iframe">Open video (gallery #2). Class mfp-iframe forces "iframe" content type on this item.</a>
 					</li>
@@ -519,6 +554,12 @@ And floored is the dashing Prince from the City of Pearls!</p>
 					<p>
 					
 						<small class="block">&copy; 2017 AlekhyaShamukh.in - All Rights Reserved.</small> 
+					</p>
+				</div>
+				<div class="col-md-12 text-center">
+					<p>
+					
+						<small class="block">Save paper, save trees</small> 
 					</p>
 				</div>
 			</div>
