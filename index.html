@@ -101,13 +101,12 @@
 					
 					<ul>
 						<li class="active"><a href="./index.html">Home</a></li>
-						<li><a href="./about_b.html">Our Story</a></li>
-						<li><a href="./events.html">Events</a></li>
-						<li><a href="./vinvite.html">Video Invitiation</a></li>
-						<li><a href="./sbook.html">Scrapbook</a></li>
-						<li><a href="./gallery.html">Gallery</a></li>
-						<li><a href="./contact.html">Contact</a></li>
-						<li><a href="./copyrights.html">Copyrights</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-couple');">Our Story</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-event');">Events</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-testimonial');">Scrapbook</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-gallery');">Gallery</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-started');">Contact</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-footer');">Copyrights</a></li>
 					</ul>
 				</div>
 				
@@ -717,9 +716,10 @@ And floored is the dashing Prince from the City of Pearls!</p>
 					</p>
 				</div>
 				<div class="col-md-12 text-center">
-					<p>
-					
-						<small class="block">Save paper, save trees</small> 
+					<p style="color: green;">
+						<span><img src="images/tree.png" width="20px" style="display:inline;"></span>
+						Save paper, save trees 
+						<span><img src="images/tree.png" width="20px" style="display:inline;"></span>
 					</p>
 				</div>
 			</div>
@@ -786,6 +786,24 @@ And floored is the dashing Prince from the City of Pearls!</p>
 			});
     });
 
+function scrollToBottom(id) {
+	$('html, body').animate({scrollTop:$(id).position().top}, 'slow');
+}
+
+function toggleMenu() {
+
+                        if ( $('body').hasClass('overflow offcanvas') ) {
+                                $('body').removeClass('overflow offcanvas');
+                        } else {
+                                $('body').addClass('overflow offcanvas');
+                        }
+                        if ( $('a')[0].classList.contains('active') ) {
+                                $('a')[0].classList.remove('active');
+                        } else {
+                                $('a')[0].classList.add('active');
+                        }
+
+}
 
 </script>
 
