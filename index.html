@@ -612,6 +612,19 @@ And floored is the dashing Prince from the City of Pearls!</p>
         day: d.getDate(),
         enableUtc: false
     });
+
+    jQuery(function() {
+			$('#fh5co-gallery-list').magnificPopup({
+			  delegate: 'a', // child items selector, by clicking on it popup will open
+			  type: 'image',
+			  gallery:{
+			    enabled:true
+			  }
+			  // other options
+			});
+    });
+
+
 </script>
 
 	</body>
