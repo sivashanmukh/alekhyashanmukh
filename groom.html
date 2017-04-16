@@ -88,9 +88,87 @@
 	to { transform: scale(1.07); }
 }
 </style>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var HeartsBackground = {
+  heartHeight: 60,
+  heartWidth: 64,
+  hearts: [],
+  heartImage: 'http://i58.tinypic.com/ntnw5.png',
+  maxHearts: 8,
+  minScale: 0.4,
+  draw: function() {
+    this.setCanvasSize();
+    this.ctx.clearRect(0, 0, this.w, this.h);
+    for (var i = 0; i < this.hearts.length; i++) {
+      var heart = this.hearts[i];
+      heart.image = new Image();
+      heart.image.style.height = heart.height;
+      heart.image.src = this.heartImage;
+      this.ctx.globalAlpha = heart.opacity;
+      this.ctx.drawImage (heart.image, heart.x, heart.y, heart.width, heart.height);
+    }
+    this.move();
+  },
+  move: function() {
+    for(var b = 0; b < this.hearts.length; b++) {
+      var heart = this.hearts[b];
+      heart.y += heart.ys;
+      if(heart.y > this.h) {
+        heart.x = Math.random() * this.w;
+        heart.y = -1 * this.heartHeight;
+      }
+    }
+  },
+  setCanvasSize: function() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+    this.w = this.canvas.width;
+    this.h = this.canvas.height;
+  },
+  initialize: function() {
+    this.canvas = $('#canvas')[0];
+
+    if(!this.canvas.getContext)
+      return;
+
+    this.setCanvasSize();
+    this.ctx = this.canvas.getContext('2d');
+
+    for(var a = 0; a < this.maxHearts; a++) {
+      var scale = (Math.random() * (1 - this.minScale)) + this.minScale;
+      this.hearts.push({
+        x: Math.random() * this.w,
+        y: Math.random() * this.h,
+        ys: Math.random() + 1,
+        height: scale * this.heartHeight,
+        width: scale * this.heartWidth,
+        opacity: scale
+      });
+    }
+
+    setInterval($.proxy(this.draw, this), 30);
+  }
+};
+
+$(document).ready(function(){
+  HeartsBackground.initialize();
+});
+</script>
+<style>
+* {
+  cursor: url("http://alekhyashanmukh.in/cursor.png"), auto;
+}
+</style>
+
+
+
+
 	</head>
 	<body>
-		
+<canvas id="canvas" style="position:fixed;z-index:100"></canvas>		
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
@@ -101,13 +179,12 @@
 					
 					<ul>
 						<li class="active"><a href="./index.html">Home</a></li>
-						<li><a href="./about_b.html">Our Story</a></li>
-						<li><a href="./events.html">Events</a></li>
-						<li><a href="./vinvite.html">Video Invitiation</a></li>
-						<li><a href="./sbook.html">Scrapbook</a></li>
-						<li><a href="./gallery.html">Gallery</a></li>
-						<li><a href="./contact.html">Contact</a></li>
-						<li><a href="./copyrights.html">Copyrights</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-couple');">Our Story</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-event');">Events</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-testimonial');">Scrapbook</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-gallery');">Gallery</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-started');">Contact</a></li>
+						<li><a href="#" onclick="toggleMenu();scrollToBottom('#fh5co-footer');">Copyrights</a></li>
 					</ul>
 				</div>
 				
@@ -244,13 +321,15 @@ And floored is the dashing Prince from the City of Pearls!</p>
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<span>Scrapbook</span>
 						<h2>Send your Wishes</h2>
+						<form id="aform" method="get" action="/">
 						<table style="margin:auto;">
 						<tbody>
 							<tr><td style="text-align:right;">Name:</td><td><input class="scrap-input" type="text" name="aname" style="border-style:none none dotted;"></td></tr>
 							<tr><td style="text-align:right;">Email:</td><td><input class="scrap-input" type="text" name="aemail" style="border-style:none none dotted;"></td></tr>
-							<tr><td style="text-align:right;vertical-align:top;">Wishes:</td><td><textarea id="awish" rows="4" style="border-style:none none dotted;"></textarea></td></tr>
-							<tr><td colspan="2"><input type="button">Submit</td></tr>
+							<tr><td style="text-align:right;vertical-align:top;">Wishes:</td><td><textarea id="awish" name="awish" rows="4" style="border-style:none none dotted;"></textarea></td></tr>
+							<tr><td colspan="2"><p><a href="javascript:{}" onclick="document.getElementById('aform').submit();" class="btn btn-default btn-sm">Submit</a></p></td></tr>
 						</tbody></table>
+						</form>
 					</div>
 				</div>
 				<!--
@@ -319,265 +398,188 @@ And floored is the dashing Prince from the City of Pearls!</p>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0549.jpg); "> 
 						<a href="images/192A0549.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0719.jpg); "> 
 						<a href="images/192A0719.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0346.jpg); "> 
 						<a href="images/192A0346.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0483.jpg); "> 
 						<a href="images/192A0483.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0591.jpg); "> 
 						<a href="images/192A0591.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0521.jpg); "> 
 						<a href="images/192A0521.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0583.jpg); "> 
 						<a href="images/192A0583.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0717.jpg); "> 
 						<a href="images/192A0717.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_2909.jpg); "> 
 						<a href="images/IMG_2909.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_2910.jpg); "> 
 						<a href="images/IMG_2910.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_3.jpg); "> 
-						<a href="images/img_bg_3.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_4.jpg); "> 
-						<a href="images/img_bg_4.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0776.jpg); "> 
 						<a href="images/192A0776.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170227-WA0036.jpg); "> 
 						<a href="images/IMG-20170227-WA0036.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/groom.jpg); "> 
 						<a href="images/groom.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170205-WA0043.jpg); "> 
-						<a href="images/IMG-20170205-WA0043.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_g.jpg); "> 
-						<a href="images/img_bg_g.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170205-WA0044.jpg); "> 
 						<a href="images/IMG-20170205-WA0044.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170205-WA0013.jpg); "> 
 						<a href="images/IMG-20170205-WA0013.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_21.jpg); "> 
-						<a href="images/img_bg_21.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/bride.jpg); "> 
 						<a href="images/bride.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_0.jpg); "> 
 						<a href="images/img_bg_0.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bgb.jpg); "> 
 						<a href="images/img_bgb.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170310-WA0014.jpg); "> 
 						<a href="images/IMG-20170310-WA0014.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/couple-1.jpg); "> 
-						<a href="images/couple-1.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
 						<a href="images/gallery-1.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_6_remove.jpg); "> 
-						<a href="images/img_bg_6_remove.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_3_remove.jpg); "> 
-						<a href="images/img_bg_3_remove.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); "> 
 						<a href="images/gallery-3.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); "> 
 						<a href="images/gallery-2.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_c1.jpg); "> 
 						<a href="images/img_bg_c1.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG-20170131-WA0011.jpg); "> 
-						<a href="images/IMG-20170131-WA0011.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_2.jpg); "> 
 						<a href="images/img_bg_2.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0530.jpg); "> 
 						<a href="images/192A0530.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_4_remove.jpg); "> 
-						<a href="images/img_bg_4_remove.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/192A0788.jpg); "> 
-						<a href="images/192A0788.jpg">
-							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img_bg_6.jpg); "> 
 						<a href="images/img_bg_6.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="https://www.youtube.com/watch?v=OZQLWHFePe8" class="mfp-iframe" style="background-image: url(images/img_bg_2.jpg); background-size: cover; color: white;">Open video (gallery #2). Class mfp-iframe forces "iframe" content type on this item.</a>
-					</li>
+					</li>-->
 					
 					</ul>		
 				</div>
@@ -718,7 +720,7 @@ And floored is the dashing Prince from the City of Pearls!</p>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); "> 
 						<a href="images/gallery-2.jpg">
 							<div class="case-studies-summary">
-								<h2>The moment</h2>
+								<h2></h2>
 							</div>
 						</a>
 					</li>
@@ -792,9 +794,10 @@ And floored is the dashing Prince from the City of Pearls!</p>
 					</p>
 				</div>
 				<div class="col-md-12 text-center">
-					<p>
-					
-						<small class="block">Save paper, save trees</small> 
+					<p style="color: green;">
+						<span><img src="images/tree.png" width="20px" style="display:inline;"></span>
+						Save paper, save trees 
+						<span><img src="images/tree.png" width="20px" style="display:inline;"></span>
 					</p>
 				</div>
 			</div>
@@ -861,6 +864,24 @@ And floored is the dashing Prince from the City of Pearls!</p>
 			});
     });
 
+function scrollToBottom(id) {
+	$('html, body').animate({scrollTop:$(id).position().top}, 'slow');
+}
+
+function toggleMenu() {
+
+                        if ( $('body').hasClass('overflow offcanvas') ) {
+                                $('body').removeClass('overflow offcanvas');
+                        } else {
+                                $('body').addClass('overflow offcanvas');
+                        }
+                        if ( $('a')[0].classList.contains('active') ) {
+                                $('a')[0].classList.remove('active');
+                        } else {
+                                $('a')[0].classList.add('active');
+                        }
+
+}
 
 </script>
 
