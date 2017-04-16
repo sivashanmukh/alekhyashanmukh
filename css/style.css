@@ -1105,6 +1105,14 @@ form label {
     height: 120px;
     margin: 0 auto;
   }
+  .couple-half h2 {
+    font-family: "Sacramento", Arial, serif;
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.5em;
+    text-shadow: 0 0 5px #000;
+  }
+
 }
 .couple-half .groom {
   float: right;
