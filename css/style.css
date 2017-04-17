@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 600px;
+    height: 500px;
   }
 }
 .fh5co-cover .display-t,
@@ -1926,7 +1926,7 @@ body.about_g {
   }
   .fh5co-cover {
     background-position: center center !important;
-    min-height: 100vh;
+    min-height: 90vh;
   }
 }
 
